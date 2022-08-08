@@ -1,0 +1,155 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+ul{
+    display: flex;
+    justify-content: space-between;
+    list-style:none;
+}
+a{
+    display: block;
+    text-decoration:none ;
+    text-transform: uppercase;
+    font-size: 1em;
+    transition: .3s;
+    letter-spacing: 1px;
+    margin-right: 20px;
+}
+header{
+    position: relative;
+    width: 100%;
+}
+.top{
+    background-color:#c5352d;
+    padding: 20px 0;
+}
+.container{
+    position: relative;
+    max-width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+.top ul li{
+    margin-right: 15px ;
+}
+.top ul li a{
+    color:#fff;
+}
+.top ul li a:hover{
+    color: #222;
+}
+nav{
+    background: #fcd031;
+    position: relative;
+    padding: 15px 0;
+    z-index: 10;
+}
+.logo{
+    position: absolute;
+    height: 220px;
+    top: -110px;
+    left: 36.5%;
+}
+nav ul{
+    width: 100%;
+    transition: .3s;
+}
+nav ul li:nth-child(4){
+    margin-left: 274px;
+}
+.itens_ul a{
+    font-size: 15px;
+}
+.itens_ul a{
+    margin-left: -50px;
+}
+nav ul li a{
+    color: #23467d;
+}
+nav ul li a:hover{
+    color: #c5352d;
+
+}
+.lista_esquerda{
+    margin-left: -20px;
+}
+nav ul li:first-child{
+    margin-left: -80px;
+}
+#menu{
+	display: none;
+}
+label{
+	color: #c5352d;
+	font-size: 1.2em;
+	padding: 15px 0;
+	display: none;
+}
+@media (max-width: 960px){
+	label{
+		display: block;
+	}
+	.container{
+		padding: 0 40px;
+	}
+	.contatostop li:nth-child(1),
+	.contatostop li:nth-child(2){
+		display: none;
+	}
+	.logo{
+		left: 38%;
+		top: -40px;
+	}
+	.logo img{
+		width: 150px;
+	}
+	nav{
+		padding: 0;
+	}
+	nav ul{
+		position: absolute;
+		top: 50px;
+		left: -100%;
+		background: #000;
+		flex-direction: column;
+		align-items: center;
+		justify-content: flex-start;
+		width: 100%;
+		height: 100vh;
+	}
+
+	#menu:checked ~ div .itemlistmenu{
+		left: 0;
+        z-index: 100;
+	}
+	nav ul li{
+		margin: 0 !important;
+		width: 100%;
+	}
+	nav ul li a{
+		border: 1px solid #ef3624;
+		padding: 15px 0;
+		margin: 10px 0;
+		text-align: center;
+	}
+	nav ul li a:hover{
+		background: #ff0;
+	}
+}
+@media (max-width: 460px){
+	.logo{
+		top: -30px;
+        left: 34%;
+	}
+	.logo img{
+		width: 150px;
+        z-index: 1000;
+	}
+    #menu:checked .logo img{
+        display: none;
+    }
+}
